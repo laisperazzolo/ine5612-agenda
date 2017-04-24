@@ -51,23 +51,14 @@ public class BeanContato implements Serializable {
     }
 
     public String gravar() {
-        Contato contato = new Contato();
-        contato.setNome(this.nome);
-        contato.setTelefone(this.telefone);
-        contato.setEndereco(this.endereco);
-        this.agenda.gravar(contato);
-        return "index.xhtml";
+        //implementar
     }
 
     public String buscar() {                
-        Contato contato = this.agenda.buscar(this.nome);
-        if (contato != null) {
-            this.endereco = contato.getEndereco();
-            this.telefone = contato.getTelefone();
-        }
-        else
-            this.nome = null;
-            
-        return "buscar.xhtml";
+        //implemementar
+    }
+    
+    public String modificar(){
+        //implementar
     }
 }
