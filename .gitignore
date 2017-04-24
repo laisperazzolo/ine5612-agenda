@@ -10,3 +10,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/ine5612-agenda/ine5612-agenda-ejb/target/
+/ine5612-agenda/ine5612-agenda-web/target/
+/ine5612-agenda/ine5612-agenda-ear/target/
