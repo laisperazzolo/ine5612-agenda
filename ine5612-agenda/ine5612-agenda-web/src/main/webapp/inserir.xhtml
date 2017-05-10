@@ -3,15 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Inserir novo contato</title>
+        <title>Inserir novo usuário</title>
     </h:head>
     <h:body>
-        <h1>Preencha os campos abaixo</h1>
+        <h1>Cadastro de usuário</h1>
         <h:form>
-           <p>Nome: <h:inputText value="#{beanContato.nome}"/></p>
-           <p>Telefone: <h:inputText value="#{beanContato.telefone}"/></p>
-           <p>Endereço: <h:inputText value="#{beanContato.endereco}"/></p>
-           <h:commandButton value="Gravar" action="#{beanContato.gravar}"/>
+           <p>Nome: <h:inputText value="#{beanUsuario.nome}"/></p>
+           <p>Email: <h:inputText value="#{beanUsuario.email}"/></p>
+           <p>Senha: <h:inputText value="#{beanUsuario.senha}"/></p>
+           <p>Tipo de Usuário: <h:inputText value="#{beanUsuario.tipoDeUsuario}"/></p>
+           <h:commandButton value="Cadastrar" action="#{beanUsuario.gravar}"/>
            <h:messages style="color:red"/>
         </h:form>
     </h:body>

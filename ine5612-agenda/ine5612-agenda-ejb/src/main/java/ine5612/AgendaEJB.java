@@ -20,12 +20,12 @@ public class AgendaEJB implements AgendaEJBLocal {
     private EntityManager em;
     
     @Override
-    public void gravar(Contato contato){
+    public void gravar(Usuario contato){
         this.em.persist(contato);
     }
     
     @Override
-    public Contato buscar(String nome){
-        return this.em.find(Contato.class, nome);
+    public Usuario buscar(String nome){
+        return this.em.find(Usuario.class, nome);
     }
 }
