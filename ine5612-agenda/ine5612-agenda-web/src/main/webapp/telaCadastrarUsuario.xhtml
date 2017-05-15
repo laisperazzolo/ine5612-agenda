@@ -11,8 +11,15 @@
            <p>Nome: <h:inputText value="#{beanUsuario.nome}"/></p>
            <p>Email: <h:inputText value="#{beanUsuario.email}"/></p>
            <p>Senha: <h:inputText value="#{beanUsuario.senha}"/></p>
-           <p>Tipo de Usuário: <h:inputText value="#{beanUsuario.tipoDeUsuario}"/></p>
-           <h:commandButton value="Cadastrar" action="#{beanUsuario.gravar}"/>
+   
+           <!-- combbox para o tipo de usuario (cliente ou funcionario) -->
+           <p>Tipo de Usuário: <select name='Tipo de Usuario'>
+            <option value='Cliente'>Cliente</option>
+            <option value='Funcionário'>Funcionário</option>
+            </select>
+           </p>
+           
+           <h:commandButton value="Salvar" action="#{beanUsuario.gravar}"/>
            <h:messages style="color:red"/>
         </h:form>
     </h:body>

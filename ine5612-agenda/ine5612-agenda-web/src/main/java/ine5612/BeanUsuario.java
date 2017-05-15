@@ -70,8 +70,29 @@ public class BeanUsuario implements Serializable {
         usuario.setSenha(this.senha);
         usuario.setTipoDeUsuario(this.tipoDeUsuario);
         this.agenda.gravar(usuario);
-        return "index.xhtml";
+        return "teste.xhtml";
     }
+    public String autenticar (){
+        return "telaFuncionario.xhtml";
+    }
+    public String cadastrarUsuario (){
+        Usuario usuario = new Usuario();
+        usuario.setNome(this.nome);
+        usuario.setEmail(this.email);
+        usuario.setSenha(this.senha);
+        usuario.setTipoDeUsuario(this.tipoDeUsuario);
+        this.agenda.gravar(usuario);
+        System.out.println("é noix");
+        return "telaCadastrarUsuario.xhtml";
+    }
+    //public String voltarParaIndex (){
+      //  return "index.xhtml";
+        /*
+        solucionar problema de voltar
+        se colocar return "index.xhtml";
+        da erro nao entendir porque ainda
+        */
+    //}
     
     /*
     public String buscar() {                

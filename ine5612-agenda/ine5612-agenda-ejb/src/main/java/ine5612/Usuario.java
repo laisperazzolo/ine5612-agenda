@@ -6,10 +6,10 @@
 package ine5612;
 
 import java.io.Serializable;
+import java.util.Set;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -22,6 +22,17 @@ public class Usuario implements Serializable {
     protected String email;
     protected String senha;
     protected String tipoDeUsuario;
+    
+    @OneToMany(mappedBy="usuario")
+    protected Set<Reserva> reservas;
+
+    public Set<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(Set<Reserva> reservas) {
+        this.reservas = reservas;
+    }
     
     public String getNome() {
         return nome;

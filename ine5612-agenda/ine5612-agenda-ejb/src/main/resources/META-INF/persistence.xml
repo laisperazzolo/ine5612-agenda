@@ -7,9 +7,4 @@
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
-  <persistence-unit name="ine5612_ine5612-agenda-ejb_ejb_1.0-SNAPSHOTPU2" transaction-type="JTA">
-    <jta-data-source>jdbc/sample</jta-data-source>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
-    <properties/>
-  </persistence-unit>
 </persistence>

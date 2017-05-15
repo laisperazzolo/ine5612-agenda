@@ -9,16 +9,12 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-/**
- *
- * @author martin
- */
 @Stateless
 public class AgendaEJB implements AgendaEJBLocal {
 
     @PersistenceContext
     private EntityManager em;
-    
+ 
     @Override
     public void gravar(Usuario contato){
         this.em.persist(contato);
