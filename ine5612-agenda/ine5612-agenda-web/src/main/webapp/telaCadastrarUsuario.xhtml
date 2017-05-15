@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Inserir novo usuário</title>
     </h:head>
@@ -12,14 +13,20 @@
            <p>Email: <h:inputText value="#{beanUsuario.email}"/></p>
            <p>Senha: <h:inputText value="#{beanUsuario.senha}"/></p>
    
-           <!-- combbox para o tipo de usuario (cliente ou funcionario) -->
+           <!-- combbox para o tipo de usuario (cliente ou funcionario) 
            <p>Tipo de Usuário: <select name='Tipo de Usuario'>
             <option value='Cliente'>Cliente</option>
             <option value='Funcionário'>Funcionário</option>
             </select>
            </p>
-           
-           <h:commandButton value="Salvar" action="#{beanUsuario.gravar}"/>
+           -->
+           <p>Tipo de Usuário:
+           <h:selectOneMenu value = "#{beanUsuario.tipoDeUsuario}"> 
+            <f:selectItem itemValue = "Cliente" itemLabel = "Cliente" /> 
+            <f:selectItem itemValue = "Funcionário" itemLabel = "Funcionário" /> 
+            </h:selectOneMenu>
+            </p>
+           <h:commandButton value="Salvar" action="#{beanUsuario.cadastrarUsuario()}"/>
            <h:messages style="color:red"/>
         </h:form>
     </h:body>

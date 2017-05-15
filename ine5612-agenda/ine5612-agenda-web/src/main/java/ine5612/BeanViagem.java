@@ -5,8 +5,11 @@
  */
 package ine5612;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
 import javax.ejb.EJB;
 import java.io.Serializable;
+import java.sql.Time;
+import java.util.Date;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
@@ -20,22 +23,25 @@ public class BeanViagem {
     @EJB
     protected AgendaEJBLocal passagem;
 
-    protected String data;
-    protected String horario;
+    protected Date data;
+    protected Time horario;
     protected String cidadeOrigem;
     protected String cidadedestino;
-    protected String valorDaPassagem;
-    protected String numMaxDeAcento;
+    protected Double valorDaPassagem;
+    protected int numMaxDeAcento;
 
-    /*public String cadastrarViagem (){
+    public String cadastrarViagem (){
         Viagem viagem = new Viagem();
         viagem.setData(this.data);
         viagem.setHorario(this.horario);
-        viagem.setSenha(this.cidadeOrigem);
-        viagem.setTipoDeUsuario(this.cidadedestino);
-        this.agenda.gravar(viagem);
+        viagem.setCidadeOrigem(this.cidadeOrigem);
+        viagem.setCidadeDestino(this.cidadedestino);
+        viagem.setValorPassagem(this.valorDaPassagem);
+        viagem.setMaxAcentos(this.numMaxDeAcento);
+        
+        this.passagem.gravar(viagem);
         return "telaCadastrarUsuario.xhtml";
-    }*/
+    }
     
     public void setPassagem(AgendaEJBLocal passagem) {
         this.passagem = passagem;
@@ -45,19 +51,19 @@ public class BeanViagem {
         return passagem;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
-    public String getHorario() {
+    public Time getHorario() {
         return horario;
     }
 
-    public void setHorario(String horario) {
+    public void setHorario(Time horario) {
         this.horario = horario;
     }
 
@@ -77,21 +83,19 @@ public class BeanViagem {
         this.cidadedestino = cidadedestino;
     }
 
-    public String getValorDaPassagem() {
+    public Double getValorDaPassagem() {
         return valorDaPassagem;
     }
 
-    public void setValorDaPassagem(String valorDaPassagem) {
+    public void setValorDaPassagem(Double valorDaPassagem) {
         this.valorDaPassagem = valorDaPassagem;
     }
 
-    public String getNumMaxDeAcento() {
+    public int getNumMaxDeAcento() {
         return numMaxDeAcento;
     }
 
-    public void setNumMaxDeAcento(String numMaxDeAcento) {
+    public void setNumMaxDeAcento(int numMaxDeAcento) {
         this.numMaxDeAcento = numMaxDeAcento;
     }
-    
-    
 }

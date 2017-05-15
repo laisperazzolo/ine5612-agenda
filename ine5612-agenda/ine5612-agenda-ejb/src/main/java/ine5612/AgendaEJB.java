@@ -21,6 +21,11 @@ public class AgendaEJB implements AgendaEJBLocal {
     }
     
     @Override
+    public void gravar(Viagem viagem){
+        this.em.persist(viagem);
+    }
+    
+    @Override
     public Usuario buscar(String nome){
         return this.em.find(Usuario.class, nome);
     }

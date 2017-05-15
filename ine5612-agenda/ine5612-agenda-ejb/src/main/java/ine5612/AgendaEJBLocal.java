@@ -14,5 +14,11 @@ import javax.ejb.Local;
 @Local
 public interface AgendaEJBLocal {
     public void gravar(Usuario contato);
+
+    /**
+     *
+     * @param viagem
+     */
+    public void gravar(Viagem viagem);
     public Usuario buscar(String nome);
 }

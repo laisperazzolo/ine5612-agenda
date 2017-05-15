@@ -70,7 +70,7 @@ public class BeanUsuario implements Serializable {
         usuario.setSenha(this.senha);
         usuario.setTipoDeUsuario(this.tipoDeUsuario);
         this.agenda.gravar(usuario);
-        return "teste.xhtml";
+        return "telaFuncionario.xhtml";//
     }
     public String autenticar (){
         return "telaFuncionario.xhtml";
@@ -82,7 +82,6 @@ public class BeanUsuario implements Serializable {
         usuario.setSenha(this.senha);
         usuario.setTipoDeUsuario(this.tipoDeUsuario);
         this.agenda.gravar(usuario);
-        System.out.println("é noix");
         return "telaCadastrarUsuario.xhtml";
     }
     //public String voltarParaIndex (){
