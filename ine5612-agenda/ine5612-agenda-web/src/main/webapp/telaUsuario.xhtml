@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <head>
+        <title>Tela do Usuário</title>
+    </head>
+    <body>
+        <h1>Tela do Usuário</h1>
+        <h:form>
+           <h:commandButton value="Visualizar viagens disponíveis" action="#{beanReserva.gravar}"/> 
+           <h:commandButton value="Reservar passagem" action="#{beanReserva.gravar}"/>
+           <h:commandButton value="Cancelar reserva" action="#{beanReserva.gravar}"/> 
+           <h:messages style="color:red"/>
+        </h:form>
+    </body>
+</html>

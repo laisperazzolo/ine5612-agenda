@@ -21,4 +21,5 @@ public interface AgendaEJBLocal {
      */
     public void gravar(Viagem viagem);
     public Usuario buscar(String nome);
+    public void gravar(Reserva reserva);
 }

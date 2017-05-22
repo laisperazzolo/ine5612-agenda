@@ -29,4 +29,9 @@ public class AgendaEJB implements AgendaEJBLocal {
     public Usuario buscar(String nome){
         return this.em.find(Usuario.class, nome);
     }
+    
+    @Override
+    public void gravar(Reserva reserva){
+        this.em.persist(reserva);
+    }
 }

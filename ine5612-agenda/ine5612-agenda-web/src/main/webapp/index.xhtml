@@ -8,7 +8,7 @@
 <h:body>
         <h1>Login</h1>
         <h:form>
-           <p>Usuário: <h:inputText value="#{beanUsuario.nome}"/></p>
+           <p>Email: <h:inputText value="#{beanUsuario.email}"/></p>
            <p>Senha: <h:inputText value="#{beanUsuario.senha}"/></p>
            <h:commandButton value="Entrar" action="#{beanUsuario.autenticar()}"/>
            <h:commandButton value="Cadastrar" action="#{beanUsuario.cadastrarUsuario()}"/>
