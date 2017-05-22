@@ -13,7 +13,7 @@ import javax.ejb.Local;
  */
 @Local
 public interface AgendaEJBLocal {
-    public void gravar(Usuario contato);
+    public void gravar(Usuario usuario);
 
     /**
      *

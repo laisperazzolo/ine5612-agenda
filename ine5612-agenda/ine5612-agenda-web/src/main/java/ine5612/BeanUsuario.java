@@ -70,10 +70,14 @@ public class BeanUsuario implements Serializable {
         usuario.setSenha(this.senha);
         usuario.setTipoDeUsuario(this.tipoDeUsuario);
         this.agenda.gravar(usuario);
-        return "telaFuncionario.xhtml";//
+        return "telaFuncionario.xhtml";
     }
     public String autenticar (){
         return "telaFuncionario.xhtml";
+    }
+    
+    public String abrirCadastrarUsuario(){
+        return "telaCadastrarUsuario.xhtml";
     }
     public String cadastrarUsuario (){
         Usuario usuario = new Usuario();

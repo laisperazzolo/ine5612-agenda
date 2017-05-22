@@ -16,8 +16,8 @@ public class AgendaEJB implements AgendaEJBLocal {
     private EntityManager em;
  
     @Override
-    public void gravar(Usuario contato){
-        this.em.persist(contato);
+    public void gravar(Usuario usuario){
+        this.em.persist(usuario);
     }
     
     @Override
