@@ -47,13 +47,13 @@ public class Viagem implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "DATA")
-    @Temporal(TemporalType.DATE)
-    private Date data;
+    
+    private String data;
     @Basic(optional = false)
     @NotNull
     @Column(name = "HORARIO")
-    @Temporal(TemporalType.TIME)
-    private Date horario;
+   
+    private String horario;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
@@ -80,7 +80,7 @@ public class Viagem implements Serializable {
         this.idViagem = idViagem;
     }
 
-    public Viagem(Integer idViagem, Date data, Date horario, String cidadeOrigem, String cidadeDestino, double valorPassagem, int maxAcentos) {
+    public Viagem(Integer idViagem, String data, String horario, String cidadeOrigem, String cidadeDestino, double valorPassagem, int maxAcentos) {
         this.idViagem = idViagem;
         this.data = data;
         this.horario = horario;
@@ -98,21 +98,24 @@ public class Viagem implements Serializable {
         this.idViagem = idViagem;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public Date getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(Date horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
+
+ 
+   
 
     public String getCidadeOrigem() {
         return cidadeOrigem;

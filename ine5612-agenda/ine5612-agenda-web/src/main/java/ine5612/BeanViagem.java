@@ -22,9 +22,9 @@ public class BeanViagem {
     
     @EJB
     protected AgendaEJBLocal passagem;
-
-    protected Date data;
-    protected Time horario;
+    protected int id;
+    protected String data;
+    protected String horario;
     protected String cidadeOrigem;
     protected String cidadedestino;
     protected Double valorDaPassagem;
@@ -51,21 +51,31 @@ public class BeanViagem {
         return passagem;
     }
 
-    public Date getData() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public Time getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(Time horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
+
+    
 
     public String getCidadeOrigem() {
         return cidadeOrigem;
